@@ -192,3 +192,39 @@ Kemudian buat view untuk form tambah dengan nama form_edit.php
 Tambahkan fungsi/method baru pada Controller Artikel dengan nama delete().
 
 ![Screenshot 2025-03-22 115752](https://github.com/user-attachments/assets/eb682175-6e77-4903-b3f5-0e010f1a638e)
+
+# Praktikum 3
+
+## Membuat Layout Utama
+Buat file main.php di dalam folder layout 
+
+![Screenshot 2025-03-22 130756](https://github.com/user-attachments/assets/acc6bc0b-0708-4a9b-aa7e-2d2e78cbef21)
+
+## Modifikasi File View
+Ubah app/Views/home.php agar sesuai dengan layout baru:
+
+![Screenshot 2025-03-22 130923](https://github.com/user-attachments/assets/ce06d9ab-855d-47ac-893a-12a1fc1b2561)
+
+## Membuat Class View Cell
+Buat folder Cells di dalam app/
+Buat file ArtikelTerkini.php di dalam app/Cells/
+
+![Screenshot 2025-03-22 131104](https://github.com/user-attachments/assets/007a801f-78db-45ac-9ebe-6b7739e209ea)
+
+## Membuat View untuk View Cell
+Buat folder components di dalam app/Views/
+Buat file artikel_terkini.php di dalam app/Views/components/
+
+![Screenshot 2025-03-22 131229](https://github.com/user-attachments/assets/bbdec4df-68d6-46d5-8063-d2a8738ae1ad)
+
+## Pertanyaan dan Tugas 
+• Apa manfaat utama dari penggunaan View Layout dalam pengembangan aplikasi?
+<p>Dengan View Layout, kita bisa bikin tampilan utama website yang dipakai di banyak halaman tanpa harus nulis ulang kode yang sama, misalnya buat header, menu, atau footer. Cukup bikin satu layout utama, lalu tinggal pakai berulang kali. Kalau ada perubahan, misalnya di menu atau footer, kita cukup edit di satu tempat tanpa perlu ubah tiap halaman satu per satu. Selain itu, View Layout juga bikin tampilan lebih rapi, karena fokusnya cuma buat nampilin data, sementara proses pengolahan data diurus di bagian lain, kayak controller dan model.</p>
+
+• Jelaskan perbedaan antara View Cell dan View biasa.
+<p>* View cell : Menampilkan komponen tampilan yang bisa digunakan kembali di berbagai halaman. Biasanya digunakan untuk bagian kecil dari tampilan yang sering muncul, seperti sidebar atau widget</p>
+<p>* view biasa : Menampilkan tampilan statis atau dengan data yang diberikan dari controller. Biasanya digunakan untuk membuat halaman utama atau bagian besar dari aplikasi</p>
+
+• Ubah View Cell agar hanya menampilkan post dengan kategori tertentu.
+![ss25](https://github.com/user-attachments/assets/812bfedc-e717-4b4f-9226-a8db7e2dd649)
+
