@@ -229,4 +229,64 @@ Buat file artikel_terkini.php di dalam app/Views/components/
 ![ss25](https://github.com/user-attachments/assets/812bfedc-e717-4b4f-9226-a8db7e2dd649)
 
 # Praktikum4
+Membuat Tabel: User Login
+
+```
+CREATE TABLE user (
+id INT(11) auto_increment,
+username VARCHAR(200) NOT NULL,
+useremail VARCHAR(200),
+userpassword VARCHAR(200),
+PRIMARY KEY(id)
+);
+```
+## Membuat Model User
+membuat Model untuk memproses data Login. Buat file baru pada direktori
+app/Models dengan nama UserModel.php
+
+![Screenshot 2025-03-27 105046](https://github.com/user-attachments/assets/3710cc01-deed-4d84-9209-3a4dccf232b0)
+
+## Membuat Controller User
+Buat Controller baru dengan nama User.php pada direktori app/Controllers. Kemudian
+tambahkan method index() untuk menampilkan daftar user, dan method login() untuk proses
+login.
+
+![Screenshot 2025-03-27 105216](https://github.com/user-attachments/assets/b26981e9-169c-4b0a-9735-91fd75302b64)
+
+## Membuat View Login
+Buat direktori baru dengan nama user pada direktori app/views, kemudian buat file baru
+dengan nama login.php.
+
+![Screenshot 2025-03-27 105347](https://github.com/user-attachments/assets/d89e8ebc-2006-4680-9b75-13b85dca1135)
+
+## Membuat Database Seeder `php spark make:seeder UserSeeder`
+Database seeder digunakan untuk membuat data dummy. Untuk keperluan ujicoba modul
+login, kita perlu memasukkan data user dan password kedaalam database. Untuk itu buat
+database seeder untuk tabel user.
+
+## Selanjutnya, buka file UserSeeder.php yang berada di lokasi direktori
+/app/Database/Seeds/UserSeeder.php kemudian isi dengan kode berikut:
+
+![Screenshot 2025-03-27 110013](https://github.com/user-attachments/assets/9a29ba05-06a6-45e3-9d0f-66f66f5d291c)
+
+Selanjutnya buka kembali CLI dan ketik perintah berikut:
+`php spark db:seed UserSeeder`
+
+## Uji Coba Login
+Selanjutnya buka url http://localhost:8080/user/login seperti berikut:
+
+![Screenshot 2025-03-27 102407](https://github.com/user-attachments/assets/a35784ba-3b5e-414d-b4e8-b6386d121da5)
+
+## Percobaan Akses Menu Admin
+Buka url dengan alamat http://localhost:8080/admin/artikel ketika alamat tersebut diakses
+maka, akan dimuculkan halaman login.
+
+![Screenshot 2025-03-27 102321](https://github.com/user-attachments/assets/115754b8-d36a-46ed-8bdf-7ba41b3e780b)
+
+## setelah memasukkan email dan password yang sesuai maka akan diarahkan pada tampilan artikel berikut 
+
+![Screenshot 2025-03-27 110319](https://github.com/user-attachments/assets/6615f0d3-44e1-461e-87c7-ac9ec7cb505f)
+
+
+
 
