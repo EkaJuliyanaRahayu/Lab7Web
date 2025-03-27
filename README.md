@@ -228,3 +228,5 @@ Buat file artikel_terkini.php di dalam app/Views/components/
 • Ubah View Cell agar hanya menampilkan post dengan kategori tertentu.
 ![ss25](https://github.com/user-attachments/assets/812bfedc-e717-4b4f-9226-a8db7e2dd649)
 
+# Praktikum4
+
