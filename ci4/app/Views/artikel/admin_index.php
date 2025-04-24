@@ -1,5 +1,50 @@
 <?= $this->include('template/admin_header'); ?>
 
+<!-- CSS untuk form pencarian -->
+<style>
+.form-search {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.form-search input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 250px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-search input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-search input[type="submit"] {
+    padding: 8px 14px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.form-search input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<!-- Form pencarian -->
+<form method="get" class="form-search">
+<input type="text" name="q" value="<?= $q; ?>" placeholder="Cari data">
+<input type="submit" value="Cari" class="btn btn-primary">
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -22,7 +67,7 @@
                     <td>
                         <a class="btn" href="<?= base_url('/admin/artikel/edit/' . $row['id']); ?>">Ubah</a>
                         <a class="btn btn-danger" onclick="return confirm('Yakin menghapus data?');" 
-                           href="<?= base_url('/admin/artikel/delete/' . $row['id']); ?>">Hapus</a>
+                        href="<?= base_url('/admin/artikel/delete/' . $row['id']); ?>">Hapus</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -41,5 +86,8 @@
         </tr>
     </tfoot>
 </table>
+
+<!-- Pagination -->
+<?= $pager->only(['q'])->links(); ?>
 
 <?= $this->include('template/admin_footer'); ?>
